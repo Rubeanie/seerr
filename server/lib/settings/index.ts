@@ -36,6 +36,8 @@ export interface PlexSettings {
   libraries: Library[];
   webAppUrl?: string;
   ignoredEditions: string[];
+  ignoredEpisodeTitles: string[];
+  ignoredEpisodeFilterMode: 'season' | 'seasonAndEpisode' | 'any';
 }
 
 export interface JellyfinSettings {
@@ -416,6 +418,8 @@ class Settings {
         useSsl: false,
         libraries: [],
         ignoredEditions: [],
+        ignoredEpisodeTitles: [],
+        ignoredEpisodeFilterMode: 'season',
       },
       jellyfin: {
         name: '',
