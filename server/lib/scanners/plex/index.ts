@@ -398,7 +398,7 @@ class PlexScanner
 
     const tvdbId = mediaIds.tvdbId ?? tvShow.external_ids?.tvdb_id;
 
-    if (tvdbId && hasAnyEpisodes) {
+    if (hasAnyEpisodes) {
       await this.processShow(mediaIds.tmdbId, tvdbId, processableSeasons, {
         mediaAddedAt: new Date(metadata.addedAt * 1000),
         ratingKey: ratingKey,
