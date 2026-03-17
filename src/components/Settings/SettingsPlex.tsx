@@ -299,7 +299,7 @@ const SettingsPlex = ({ onComplete }: SettingsPlexProps) => {
         autoDismiss: true,
         appearance: 'success',
       });
-    } catch (e) {
+    } catch {
       if (toastId) {
         removeToast(toastId);
       }
@@ -446,7 +446,7 @@ const SettingsPlex = ({ onComplete }: SettingsPlexProps) => {
               autoDismiss: true,
               appearance: 'success',
             });
-          } catch (e) {
+          } catch {
             if (toastId) {
               removeToast(toastId);
             }
@@ -933,7 +933,7 @@ const SettingsPlex = ({ onComplete }: SettingsPlexProps) => {
                     appearance: 'success',
                   }
                 );
-              } catch (e) {
+              } catch {
                 addToast(
                   intl.formatMessage(messages.toastTautulliSettingsFailure),
                   {
